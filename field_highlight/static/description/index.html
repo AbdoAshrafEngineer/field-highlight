@@ -1,109 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact & Support | Odoo Expert</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f9f7fa;
-            color: #333;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        section {
-            padding: 100px 0;
-        }
-        .contact-section {
-            background: linear-gradient(135deg, #f8f5f9 0%, #f0e9f2 100%);
-            text-align: center;
-        }
-        h1 {
-            color: #6B2D5C;
-            font-size: 36px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-        .subtitle {
-            font-size: 18px;
-            color: #444;
-            max-width: 520px;
-            margin: 0 auto 50px;
-            line-height: 1.6;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 14px;
-            padding: 18px 40px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: 500;
-            color: white;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-        .btn-linkedin {
-            background-color: #0077b5;
-        }
-        .btn-whatsapp {
-            background-color: #25D366;
-        }
-        .btn:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-        }
-        .btn i {
-            font-size: 28px;
-        }
-    </style>
-</head>
-<body>
+<style>
+    .btn-custom {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 35px;
+        border-radius: 10px;
+        text-decoration: none !important;
+        font-size: 18px;
+        font-weight: 600;
+        color: #ffffff !important;
+        margin: 10px;
+        transition: transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .btn-linkedin-custom {
+        background-color: #0077b5 !important;
+    }
+    .btn-whatsapp-custom {
+        background-color: #25D366 !important;
+    }
+</style>
 
-    <section class="contact-section">
-        <div class="container">
+<section class="oe_container" style="background: linear-gradient(135deg, #f8f5f9 0%, #f0e9f2 100%); padding: 60px 20px; text-align: center; border-radius: 15px;">
+    <div class="oe_row">
+        <h1 style="color: #6B2D5C; font-size: 36px; font-weight: 600; margin-bottom: 16px;">
+            Contact & Support
+        </h1>
+        
+        <p style="font-size: 18px; color: #444; max-width: 600px; margin: 0 auto 40px; line-height: 1.6;">
+            Professional Odoo implementation, custom development,<br>
+            and expert technical consulting.
+        </p>
+        
+        <div style="display: block; margin: 0 auto;">
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/abdelrahman-ashraf-ahmed-ahmed/" 
+               target="_blank" 
+               class="btn-custom btn-linkedin-custom">
+                <i class="fa fa-linkedin" style="margin-right: 10px; font-size: 24px;"></i>
+                LinkedIn
+            </a>
             
-            <h1>Contact & Support</h1>
-            
-            <p class="subtitle">
-                Professional Odoo implementation, custom development,<br>
-                and expert technical consulting.
-            </p>
-            
-            <div class="buttons">
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/abdelrahman-ashraf-ahmed-ahmed/" 
-                   target="_blank" 
-                   class="btn btn-linkedin">
-                    <i class="fa fa-linkedin"></i>
-                    LinkedIn
-                </a>
-                
-                <!-- WhatsApp -->
-                <a href="https://wa.me/201003943683" 
-                   target="_blank" 
-                   class="btn btn-whatsapp">
-                    <i class="fa fa-whatsapp"></i>
-                    WhatsApp
-                </a>
-            </div>
-
+            <!-- WhatsApp -->
+            <a href="https://wa.me/201003943683" 
+               target="_blank" 
+               class="btn-custom btn-whatsapp-custom">
+                <i class="fa fa-whatsapp" style="margin-right: 10px; font-size: 24px;"></i>
+                WhatsApp
+            </a>
         </div>
-    </section>
-
-</body>
-</html>
+    </div>
+</section>
