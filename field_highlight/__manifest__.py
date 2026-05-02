@@ -12,7 +12,7 @@
             "field_highlight/static/src/css/field_border.scss",
         ],
     },
-    "images": ["static/description/main_screenshot.png"],
+    "images": ["static/description/icon.png"],
     "installable": True,
     "application": False,
     "price": 0,
