@@ -1,0 +1,149 @@
+/* =========================================================
+   Premium Form Fields - Odoo 18 (SCSS)
+   ========================================================= */
+
+/* --- 1. Theme Variables (Light & Dark Mode) --- */
+:root {
+    --premium-dark-silver: #94a3b883;
+    --premium-blue-hover: #3b82f6;
+    --premium-blue-focus: #2563eb;
+    --premium-ring: rgba(59, 130, 246, 0.15);
+}
+
+[data-bs-theme="dark"] {
+    --premium-dark-silver: #475569d8;
+    --premium-blue-hover: #60a5fa;
+    --premium-blue-focus: #93c5fd;
+    --premium-ring: rgba(96, 165, 250, 0.25);
+}
+
+/* --- 2. Form scope only --- */
+.o_form_view {
+
+    /* Base inputs in form views */
+    .o_input,
+    .o_datepicker_input,
+    select.o_input,
+    textarea.o_input {
+        border: 3px solid var(--premium-dark-silver) !important;
+        background-color: transparent !important;
+        color: inherit !important;
+        border-radius: 8px !important;
+        padding: 6px 10px !important;
+        // transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    // .o_field_monetary .o_input.position-absolute {
+    //     border: none !important;
+    // }
+
+    .o_field_monetary .d-inline-flex {
+        border: 3px solid var(--premium-dark-silver) !important;
+        background-color: transparent !important;
+        color: inherit !important;
+        border-radius: 8px !important;
+        padding: 6px 10px !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* Remove the border from the specific internal elements that still have the .o_input class */
+    .o_field_monetary .o_input {
+        border: none !important;
+        padding: 0 !important;
+        /* Remove padding here as it's now on the parent */
+    }
+
+    /* Keep your existing hover/focus rules but ensure they target the new main wrapper */
+
+    /* Hover (not focused, not disabled, not readonly) */
+    .o_field_monetary .d-inline-flex:hover:not(:focus):not(:disabled):not([readonly]) {
+        border-color: var(--premium-blue-hover) !important;
+    }
+
+    /* Focus */
+    /* Note: Focus behavior might be tricky to manage on the wrapper DIV when the INPUT inside is focused */
+    .o_field_monetary input.o_input:focus {
+        /* You might need JS to add a class to the parent when the input is focused for complex focus styling */
+    }
+    
+    .o_field_many2many_tags .o_field_tags.o_input {
+        border: 3px solid var(--premium-dark-silver) !important;
+        background-color: transparent !important;
+        border-radius: 8px !important;
+        padding: 6px 10px !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    /* !! ADD THIS RULE TO FIX THE INTERNAL INPUT BORDER !! */
+    /* Remove borders from the input field inside the tags container */
+    .o_field_many2many_tags .o-autocomplete--input.o_input {
+        border: none !important;
+        padding: 0 !important;
+        /* Remove internal padding to align correctly */
+        box-shadow: none !important;
+        background-color: transparent !important;
+    }
+
+    /* Hover (not focused, not disabled, not readonly) */
+    .o_input:hover:not(:focus):not(:disabled):not([readonly]),
+    .o_datepicker_input:hover:not(:focus):not(:disabled):not([readonly]),
+    select.o_input:hover:not(:focus):not(:disabled):not([readonly]),
+    textarea.o_input:hover:not(:focus):not(:disabled):not([readonly]) {
+        border-color: var(--premium-blue-hover) !important;
+    }
+
+    /* Focus */
+    .o_input:focus,
+    .o_datepicker_input:focus,
+    select.o_input:focus,
+    textarea.o_input:focus {
+        border-color: var(--premium-blue-focus) !important;
+        box-shadow: 0 0 0 4px var(--premium-ring) !important;
+    }
+
+    /* --- 3. HTML field (Summernote) --- */
+    .o_field_html .note-editable {
+        border: 3px solid var(--premium-dark-silver) !important;
+        border-radius: 8px !important;
+        background-color: transparent !important;
+    }
+
+    /* --- 4. Checkboxes & Radios (Bootstrap) --- */
+    .form-check-input {
+        border: 2px solid var(--premium-dark-silver) !important;
+        background-color: transparent !important;
+        width: 1.2em;
+        height: 1.2em;
+
+        &:checked {
+            background-color: var(--premium-blue-hover) !important;
+            border-color: var(--premium-blue-hover) !important;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px var(--premium-ring) !important;
+        }
+    }
+
+    /* --- 5. Required field indicator --- */
+    .o_field_widget.o_required_modifier>.o_input,
+    .o_field_widget.o_required_modifier>.o_datepicker>.o_input,
+    .o_field_widget.o_required_modifier.o_input {
+        border-left: 5px solid var(--premium-blue-focus) !important;
+    }
+
+    /* --- 6. Fix internal widget inputs without breaking everything --- */
+    /* Many2one/autocomplete dropdown internal inputs */
+    .o_input_dropdown,
+    .o-autocomplete {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        background: transparent !important;
+        margin: 0 !important;
+    }
+}
